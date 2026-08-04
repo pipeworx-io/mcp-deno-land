@@ -1,13 +1,20 @@
-# mcp-deno-land
+# @pipeworx/deno-land
 
-deno.land/x registry MCP.
+[deno.land/x](https://deno.land/x) MCP — third-party Deno module registry. Keyless.
 
-Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 673+ live data sources.
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 1394+ live data sources.
 
 ## Tools
 
-| Tool | Description |
-|------|-------------|
+- `module(name)` — module metadata + latest version
+- `versions(name)` — list versions
+- `version(name, version)` — single version metadata
+- `search(query, limit?)` — name + description search
+- `dependencies(name, version)` — module dependencies (best-effort scrape from version meta)
+
+## Data source
+
+`https://apiland.deno.dev/v2/modules/`
 
 ## Quick Start
 
@@ -23,7 +30,7 @@ Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
 }
 ```
 
-Or connect to the full Pipeworx gateway for access to all 673+ data sources:
+Or connect to the full Pipeworx gateway for access to all 1394+ data sources:
 
 ```json
 {
@@ -47,7 +54,7 @@ The gateway picks the right tool and fills the arguments automatically.
 
 ## More
 
-- [All tools and guides](https://github.com/pipeworx-io/examples)
+- [Docs and guides](https://pipeworx.io/docs)
 - [pipeworx.io](https://pipeworx.io)
 
 ## License
