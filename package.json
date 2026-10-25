@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-deno-land",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "deno.land/x registry MCP. Keyless.",
   "type": "module",
   "main": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-019b73d550614383f972576747870d4f265d4efa96190ce82c3ee2f2ca0dbb47",
-    "sourceCommit": "5749f83c0ea115fab4c0c0ef04b66b05f2507d67"
+    "sourceHash": "v1-0ddf0709a5af5def0a4908d47d4e5c65204072cba178fc7bf8dd5eb39220f6b0",
+    "sourceCommit": "29fb434ca65fe0f61191f19c3502f583f5fb99d7"
   }
 }
