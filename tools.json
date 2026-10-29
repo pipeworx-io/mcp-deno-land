@@ -1,0 +1,90 @@
+[
+  {
+    "name": "module",
+    "description": "deno.land/x module summary from the registry CDN: latest version, every published version, and the import URL. Keyless.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Module name as it appears in deno.land/x, e.g. \"oak\"."
+        }
+      },
+      "required": [
+        "name"
+      ]
+    }
+  },
+  {
+    "name": "versions",
+    "description": "Every published version of a deno.land/x module, newest first, plus which one is `latest`. Keyless.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    }
+  },
+  {
+    "name": "version",
+    "description": "One published release of a deno.land/x module: when it was uploaded, the GitHub repository and ref it was published from, and the full file listing for that version.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string",
+          "description": "e.g. \"v17.2.0\" — call versions first if unsure."
+        }
+      },
+      "required": [
+        "name",
+        "version"
+      ]
+    }
+  },
+  {
+    "name": "search",
+    "description": "NOT AVAILABLE: deno.land/x has no public search API — the apiland.deno.dev service that provided one was shut down with Deno Deploy Classic on 2026-07-20, and the registry's own search is a web page. This tool returns an empty list with `empty_reason: \"upstream_removed\"` rather than guessing. If you know the module name, call module or versions instead.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string"
+        },
+        "limit": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "query"
+      ]
+    }
+  },
+  {
+    "name": "dependencies",
+    "description": "NOT AVAILABLE: the dependency graph came from apiland.deno.dev, which was shut down on 2026-07-20; the registry CDN that replaced it publishes no dependency data. Returns `empty_reason: \"upstream_removed\"` with the module's source repository, so you can read its deps at source. Use version for the file listing and repo pointer.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "version"
+      ]
+    }
+  }
+]
